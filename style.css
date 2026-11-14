@@ -1,84 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap");
 
 :root {
-    --primary-color: #896f3d;
-    --secondary-color: #102134;
-    --box-color: #f5f5f5;
-    --font-display: 'Permanent Marker', cursive;
-    --font-body: 'Inter', sans-serif;
+  --primary-color: #896f3d;
+  --secondary-color: #102134;
+  --box-color: #f5f5f5;
+  --font-display: "Permanent Marker", cursive;
+  --font-body: "Inter", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--secondary-color);
-    color: var(--box-color);
+  font-family: var(--font-body);
+  background-color: var(--secondary-color);
+  color: var(--box-color);
 }
 
 header {
-    background-color: var(--primary-color);
-    padding: 10px;
-    font-family: var(--font-display);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  background-color: var(--primary-color);
+  padding: 10px;
+  font-family: var(--font-display);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .container {
-    width: 100%;
-    min-height: 90vh;
-    padding: 3rem 1.5rem;
+  width: 100%;
+  min-height: 90vh;
+  padding: 3rem 1.5rem;
 }
 
 .container h2 {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .card-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .card {
-    background-color: var(--box-color);
-    color: var(--secondary-color);
-    width: 100%;
-    max-width: 320px;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    gap: 1.25rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    padding: 1.75rem;
+  background-color: var(--box-color);
+  color: var(--secondary-color);
+  width: 100%;
+  max-width: 320px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  padding: 1.75rem;
 }
 
 .btn {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: 600;
-    border: 2px solid var(--secondary-color);
-    padding: 0.65rem 1.25rem;
-    border-radius: 6px;
-    transition: background-color 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+  border: 2px solid var(--secondary-color);
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--box-color);
+  background-color: var(--secondary-color);
+  color: var(--box-color);
+}
+.main {
+  padding: 1.5rem 1.5rem;
+}
+.btn1 {
+  display: inline-block; /* Crucial: allows margins and padding to work on <a> tags */
+  text-decoration: none;
+  color: var(--box-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.25s ease;
+}
+
+.btn1:hover {
+  border-bottom: 2px solid var(--box-color);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Optional subtle hover background */
+}
+#ai-generation-form {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: var(--box-color);
+  color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+#ai-generation-form fieldset {
+  border: 2px solid rgba(16, 33, 52, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+#ai-generation-form legend {
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0 0.75rem;
+  color: var(--primary-color);
+}
+.form-group > label,
+.form-group > span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 33, 52, 0.15);
+  color: var(--secondary-color);
+  background-color: var(--box-color);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.form-group select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(137, 111, 61, 0.25);
+  outline: none;
+}
+.form-group select:disabled {
+  background-color: rgb(231, 193, 193);
+  color: black;
+  cursor: not-allowed;
+}
+#ai-generation-form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--box-color);
+  font-weight: 600;
+  padding: 0.7rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+#ai-generation-form button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: var(--box-color);
 }

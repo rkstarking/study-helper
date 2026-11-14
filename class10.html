@@ -1,16 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 10 - Vidya Solution</title>
-    <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <h1><i class="fa-solid fa-brain" aria-hidden="true"></i> Vidya Solution</h1>
-        <p>Board exam preparation made easy</p>
+      <h1>
+        <i class="fa-solid fa-brain" aria-hidden="true"></i> Vidya Solution
+      </h1>
+      <p>Class 10 Study Material For You</p>
     </header>
-</body>
+
+    <main class="main">
+      <a class="btn1" href="index.html">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home
+      </a>
+
+      <form id="ai-generation-form">
+        <fieldset>
+          <legend>Start Revision</legend>
+
+          <!-- 1. Board Selection -->
+          <div class="form-group" style="margin-bottom: 1rem">
+            <label for="board">Select Board:</label>
+            <select id="board" name="board" required>
+              <option value="" disabled selected>-- Choose Board --</option>
+              <option value="bseb">Bihar Board (BSEB)</option>
+              <option value="cbse">CBSE</option>
+            </select>
+          </div>
+
+          <!-- 2. Medium Radio Buttons -->
+          <div class="form-group" style="margin-bottom: 1rem">
+            <span>Select Medium:</span>
+            <label style="margin-right: 1.25rem; cursor: pointer">
+              <input type="radio" name="medium" value="hindi" required /> Hindi
+              Medium (हिंदी)
+            </label>
+            <label style="cursor: pointer">
+              <input type="radio" name="medium" value="english" /> English
+              Medium
+            </label>
+          </div>
+
+          <!-- 3. Subject Selection -->
+          <div class="form-group" style="margin-bottom: 1rem">
+            <label for="subject">Select Subject:</label>
+            <select id="subject" name="subject" required disabled>
+              <option value="" disabled selected>
+                -- Choose Board First --
+              </option>
+              <option value="maths">Maths</option>
+              <option value="science">Science</option>
+              <option value="social-science">Social Science</option>
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+            </select>
+          </div>
+
+          <!-- 4. Chapter Selection (Fixed duplicate ID & broken quote) -->
+          <div class="form-group" style="margin-bottom: 1rem">
+            <label for="chapters">Select Chapter:</label>
+            <select id="chapters" name="chapters" required disabled>
+              <option value="" disabled selected>
+                -- Choose Subject First --
+              </option>
+            </select>
+          </div>
+
+          <!-- 5. Revision Type Selection -->
+          <div class="form-group" style="margin-bottom: 1.25rem">
+            <label for="revision-type">Select Type of Revision:</label>
+            <select id="revision-type" name="revision_type" required>
+              <option value="" disabled selected>
+                -- Choose Revision Type --
+              </option>
+              <option value="summary">Chapter Summary & Notes</option>
+              <option value="pyq">
+                PYQ Practice (Previous Year Questions)
+              </option>
+              <option value="test">Practice Test / Quiz</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="btn"
+            style="width: 100%; cursor: pointer"
+          >
+            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+            Generate Content
+          </button>
+        </fieldset>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
